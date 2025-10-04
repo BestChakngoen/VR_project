@@ -1,0 +1,81 @@
+# Exclude automatically generated files and folders
+# เพื่อไม่รวมไฟล์และโฟลเดอร์ที่ Unreal Engine สร้างขึ้นเอง
+# โดยปกติแล้วโฟลเดอร์เหล่านี้จะสามารถลบได้อย่างปลอดภัยและจะถูกสร้างใหม่เมื่อจำเป็น
+
+# Cache and derived data
+# แคชและข้อมูลที่ได้มาจากการประมวลผล (Derived Data)
+# โฟลเดอร์เหล่านี้มีขนาดใหญ่มากและไม่ควรถูกติดตาม
+DerivedDataCache/
+Intermediate/
+.vs/
+.vscode/
+
+# Build and configuration data
+# ข้อมูลการสร้าง (Build) และการตั้งค่า
+Build/
+Saved/
+.DS_Store
+
+# Log files and reports
+# ไฟล์บันทึก (Log files) และรายงาน
+*.log
+*.dmp
+*.pdb
+CrashReportClient.ini
+Config/ShaderVersion.usf
+/Config/Platforms/*/ConsoleVariables.ini
+
+# Executables, libraries, and binaries
+# ไฟล์สั่งรัน (Executables), ไลบรารี และไฟล์ไบนารี
+Binaries/
+*.lib
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Visual Studio / IDE specific files (excluding the solution file itself)
+# ไฟล์เฉพาะของ Visual Studio / IDE (ยกเว้นไฟล์ .sln ที่ควรจะติดตาม)
+.VC.db
+.VC.VC.opendb
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.ncb
+
+# Mac specific files
+# ไฟล์เฉพาะสำหรับ Mac
+*.xcworkspace
+xcuserdata/
+
+# Content-related ignores
+# การละเว้นที่เกี่ยวข้องกับ Content
+# โดยทั่วไปจะรวมเฉพาะไฟล์ที่ควรถูกสร้างใหม่หรือไฟล์ชั่วคราวภายใน Content
+
+# Exclude generated asset files inside Content folders (e.g., from cooking/packaging)
+# หากมีการตั้งค่าเฉพาะในการ Build
+# Content/Collections/
+# Content/Developers/
+
+# Optional: Source Control specific files (if not using Unreal's built-in)
+# ไฟล์เฉพาะสำหรับ Source Control อื่น ๆ
+*.VC.db
+.svn/
+.git/
+.hg/
+
+# Optional: Git LFS (Large File Storage) - only if you are not using LFS for UAssets/UMaps
+# NOTE: สำหรับโปรเจกต์ Unreal Engine ส่วนใหญ่ **ควรใช้ Git LFS** เพื่อติดตามไฟล์ Content (.uasset, .umap, ฯลฯ)
+# ถ้าคุณกำลังใช้ LFS คุณไม่ควรละเว้นไฟล์เหล่านี้ใน .gitignore แต่ควรตั้งค่าใน .gitattributes แทน
+
+# ถ้าคุณไม่ได้ใช้ Git LFS และต้องการละเว้นไฟล์ขนาดใหญ่ที่ไม่ใช่โค้ด:
+# *.uasset
+# *.umap
+
+# Project files that should be tracked (เป็นตัวอย่างของสิ่งที่ *ไม่ควร* ละเว้น)
+# !*.uproject  # ไฟล์โปรเจกต์
+# !Source/     # โค้ด Source C++
+# !Config/     # ไฟล์ Config หลัก
+# !Content/    # ไฟล์ Content (ถ้าคุณจัดการไฟล์ขนาดใหญ่ด้วย LFS หรือต้องการติดตาม)
